@@ -51,12 +51,9 @@
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
     function compareDate(a, b){
-      const ageA = a.passed - a.year;
-      const ageB = b.passed - b.year; 
-
-      if(ageA < ageB) return 1;
-      if(ageA == ageB) return 0;
-      if(ageA > ageB) return -1;
+      if(a.year > b.year) return 1;
+      if(a.year == b.year) return 0;
+      if(a.year < b.year) return -1;
     }
 
     const sortedAge = inventors.sort(compareDate);
