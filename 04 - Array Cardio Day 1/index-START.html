@@ -89,6 +89,16 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const sortLastName = people.sort((a, b) => {
+      // get last name of a
+      const lastA = a.slice(0, a.indexOf(",")); 
+      // get last name of b
+      const lastB = b.slice(0, b.indexOf(","));
+      // compare last names
+      // return 1 or -1 depending on condition
+      return lastA > lastB ? 1 : -1;
+    })
+    console.log(sortLastName);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
